@@ -1,0 +1,41 @@
+<h1>Formulaire</h1>
+<hr>
+<div class="add-contact">
+
+  <form [formGroup]="form" #formDirective="ngForm" (ngSubmit)="submit(formDirective)" novalidate>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nom complet</mat-label>
+      <input matInput autocomplete="off" required formControlName="fullName">
+      <mat-error *ngFor="let validation of messages.validation.fullName">
+        <mat-error *ngIf="form.get('fullName')!.hasError(validation.type)">
+          {{validation.message}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>pseudo</mat-label>
+      <input matInput autocomplete="off" required formControlName="pseudo">
+      <mat-error *ngFor="let validation of messages.validation.pseudo">
+        <mat-error *ngIf="form.get('pseudo')!.hasError(validation.type)">
+          {{validation.message}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>@email</mat-label>
+      <input matInput autocomplete="off" required formControlName="email">
+      <mat-error *ngFor="let validation of messages.validation.email">
+        <mat-error *ngIf="form.get('email')!.hasError(validation.type)">
+          {{validation.message}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-footer">
+      <button mat-raised-button type="submit" >Ajouter</button>
+    </div>
+  </form>
+</div>

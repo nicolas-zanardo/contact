@@ -1,0 +1,19 @@
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef> full name </th>
+      <td mat-cell *matCellDef="let contact">
+        <div class="btn-select " (click)="selectContact(contact)">
+          {{contact.fullName}}
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+

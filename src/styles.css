@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mat-form-field {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 0.5rem;
+}
+

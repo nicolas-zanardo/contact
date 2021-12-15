@@ -1,0 +1,25 @@
+.add-contact {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-footer {
+  display: block;
+}
+
+button {
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+
